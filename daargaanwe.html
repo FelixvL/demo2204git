@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function starten(){
+			console.log("starten");
+			var getal = 15;
+			getal = getal + 1;
+			getal += 1;
+			getal++;
+
+			for( var x = 0 ; x < 10 ; x++ ){
+				console.log("ik zit in de loop"+x);
+			}
+
+			var verzameling = [5, 8, 12, 14, 3, 4];
+			console.log(verzameling[3] + 15);
+
+			for( var y =0; y < verzameling.length ; y++    ){
+				console.log("ik zit in het array");
+				console.log( verzameling[y]  );
+			}
+			var uitgang = document.getElementById("wegschrijven");
+			var mijnwoord = "bijna somer!";
+			for(var r =0; r < mijnwoord.length; r++){
+				console.log(mijnwoord[r]);
+				if(mijnwoord[r] == "z"){
+					alert("er zit een z in");
+				}
+				uitgang.innerHTML += mijnwoord[r]+"<br>";
+			}
+			var eenwoord = "donderdagh";
+			if(  eenwoord.endsWith("h")  ){
+			//if(  eenwoord.charAt(0) == "d"   ){
+				alert("ja");
+			}else{
+				alert("nee");
+			}
+			var a = 25;
+			var b = 33;
+			
+			if( a > 50   || b < 25  ){
+				alert("een van de twee waar");
+			}
+			for(var u = 0; u < 10; u++){
+				uitgang.innerHTML += "<h1>Hier een tekst</h1><textarea></textarea>";
+			}
+
+		}
+		var aantalgeklikt = 0;
+		function starten2(){
+			var s = 0;
+			alert(++s);
+			alert(s);
+			aantalgeklikt++;
+			console.log(aantalgeklikt);
+			document.getElementById("plaatje").src = "a.png";
+		}
+	</script>
+</head>
+<body>
+	<input type="button" onclick="starten()" value="Beginnen">
+	<input type="button" onclick="starten2()" value="Beginnen2">
+	<div id="wegschrijven">uitkomst</div>
+	<img src="b.png" id="plaatje">
+</body>
+</html>
